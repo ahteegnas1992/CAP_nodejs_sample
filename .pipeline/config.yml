@@ -1,0 +1,15 @@
+# Project configuration
+general:
+  buildTool: "mta"                                  # "mta", "npm", or "maven" (default: "mta")
+
+service:
+  buildToolVersion: "MBTJ11N14"                     # depends on buildTool value, see table below
+
+# Stage configuration
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: true    # true, if you want to execute static code checks (default: false)
+    npmExecuteLint: true                  # true, if you want to run a lint check that verifies the syntax of your JavaScript code (default: false)
+
+# Step configuration
+#steps:

@@ -1,9 +1,9 @@
 # Project configuration
 general:
-  buildTool: "mta"                                  # "mta", "npm", or "maven" (default: "mta")
+  buildTool: "npm"                                  # "mta", "npm", or "maven" (default: "mta")
 
 service:
-  buildToolVersion: "MBTJ11N14"                     # depends on buildTool value, see table below
+  buildToolVersion: "Node 14"                     # depends on buildTool value, see table below
 
 # Stage configuration
 stages:

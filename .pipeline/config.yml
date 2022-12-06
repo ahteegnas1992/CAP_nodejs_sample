@@ -5,7 +5,7 @@ general:
 service:
   buildToolVersion: "Node 14"                     # depends on buildTool value, see table below
 
-# Stage configuration
+# Stage configuration
 stages:
   Build:
     mavenExecuteStaticCodeChecks: true    # true, if you want to execute static code checks (default: false)

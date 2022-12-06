@@ -8,8 +8,8 @@ service:
 # Stage configuration
 stages:
   Build:
-    mavenExecuteStaticCodeChecks: false    # true, if you want to execute static code checks (default: false)
-    npmExecuteLint: false                  # true, if you want to run a lint check that verifies the syntax of your JavaScript code (default: false)
+    mavenExecuteStaticCodeChecks: true    # true, if you want to execute static code checks (default: false)
+    npmExecuteLint: true                  # true, if you want to run a lint check that verifies the syntax of your JavaScript code (default: false)
 
 # Step configuration
 #steps:

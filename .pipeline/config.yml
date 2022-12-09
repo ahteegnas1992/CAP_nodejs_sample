@@ -19,6 +19,8 @@ stages:
 
 # Step configuration
 steps:
+  npmExecuteLint:
+    failOnError: true
   npmExecuteScripts:                                                        # only relevant, if you set the npmExecuteScripts parameter in the Additional Unit Tests stage to true
     runScripts:
         - "test"                                                        

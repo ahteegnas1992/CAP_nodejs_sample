@@ -39,9 +39,5 @@
       "require-atomic-updates": "off"
       "linebreak-style": "off"
     }
-    "scripts": {
-    "test": "eslint 'src/**/*.js?(x)'"
-  }
-
   }
 }

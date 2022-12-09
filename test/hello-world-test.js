@@ -10,4 +10,4 @@ describe('Hello world!', () => {
         expect(data.value).toMatch(/Hello world.*typescript.*/i)
     })
 
-})
+  })

@@ -8,9 +8,7 @@ stages:
   Build:
     mavenExecuteStaticCodeChecks: true    # true, if you want to execute static code checks (default: false)
     npmExecuteLint: true                  # true, if you want to run a lint check that verifies the syntax of your JavaScript code (default: false)
-# Step configuration
-#steps:
- Release:
+   Release:
     cloudFoundryDeploy: true                                                # true, if you want to deploy to Cloud Foundry. If you set this parameter to true, the CloudFoundryDeploy step is mandatory
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com" # for example, "https://api.cf.eu10.hana.ondemand.com"
     cfOrg:  "7b45cd19trial"
@@ -18,3 +16,9 @@ stages:
     cfAppName: "hello"    
     cfCredentialsId: "deploy-cf"
     tmsUpload: false
+
+# Step configuration
+steps:
+  npmExecuteScripts:                                                        # only relevant, if you set the npmExecuteScripts parameter in the Additional Unit Tests stage to true
+    runScripts:
+        - "test"                                                        

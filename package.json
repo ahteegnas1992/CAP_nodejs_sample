@@ -36,7 +36,7 @@
     },
     "rules": {
       "no-console": "off",
-      "require-atomic-updates": "off"
+      "require-atomic-updates": "off",
       "linebreak-style": "off"
     }
   }

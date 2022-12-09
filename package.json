@@ -35,8 +35,13 @@
       "cds": true
     },
     "rules": {
-      "no-console": "off",
+      "no-console": "0",
       "require-atomic-updates": "off"
+      "linebreak-style": "0"
     }
+    "scripts": {
+    "test": "eslint 'src/**/*.js?(x)'"
+  }
+
   }
 }

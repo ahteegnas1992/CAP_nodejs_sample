@@ -4,7 +4,15 @@ node(){
   stage('Prepare')   {
       deleteDir()
       echo $scm
-      checkout scm
+      #checkout scm
+      checkout([
+        $class: 'GitSCM', 
+        branches: [[name: '*/main']], 
+        doGenerateSubmoduleConfigurations: false, 
+        extensions: [[$class: 'CleanCheckout']], 
+        submoduleCfg: [], 
+        userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/ahteegnas1992/demo']]
+    ])
       setupCommonPipelineEnvironment script:this
   }
 

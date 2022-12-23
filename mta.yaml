@@ -4,15 +4,13 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
-  
-  
+  buildpack: nodejs_buildpack
 build-parameters:
   before-all:
    - builder: custom
      commands:
       - npm install
       - npx cds build
- 
 modules:
  # --------------------- SERVER MODULE ------------------------
  - name: demo-srv

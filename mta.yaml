@@ -12,3 +12,12 @@ build-parameters:
      commands:
       - npm install
       - npx cds build
+ 
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: demo-srv
+ # ------------------------------------------------------------
+   type: nodejs
+   path: gen/srv
+   properties:
+     EXIT: 1 

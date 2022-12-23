@@ -1,23 +1,12 @@
 @Library('piper-lib-os') _
 
-node(){
-  stage('init')   {
-     # deleteDir()
-      echo $scm
-      echo "test*********************************************************************************"
-      #checkout scm
-      checkout([
-        $class: 'GitSCM', 
-        branches: [[name: '*/main']], 
-        doGenerateSubmoduleConfigurations: false, 
-        extensions: [[$class: 'CleanCheckout']], 
-        submoduleCfg: [], 
-        userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/ahteegnas1992/demo']]
-    ])
-      setupCommonPipelineEnvironment script:this
+node() {
+  stage('init') {
+    deleteDir()
+    checkout scm
   }
 
-  stage('Build')   {
+  stage('Build and test')   {
       mtaBuild script:this
   }
 

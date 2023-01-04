@@ -4,6 +4,7 @@ node() {
   stage('init') {
     deleteDir()
     checkout scm
+     setupCommonPipelineEnvironment script:this
   }
 
   stage('Build and test')   {
